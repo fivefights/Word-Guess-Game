@@ -21,7 +21,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 gameTitle">
-                <!-- <h1>hangman</h1> -->
                 <img src="assets/images/logo-black.png" alt="">
                 <h1>hangman</h1>
                 <h4>type a letter to start guessing!</h4>
@@ -32,23 +31,32 @@
     <!-- begin game area -->
         <div class="row">
             <div class="col-md-6 gameArea">
-                <h4 class="guesses">GUESSES LEFT: <span id="guessesLeft">10</span></h4>
-                <p>this is the game area</p>
-                <h4 class="wins col-md-6">WINS: <span id="winScore">10</span></h4>
-                <h4 class="losses col-md-6">LOSSES: <span id="lossScore">10</span></h4>
+                <!-- guesses -->
+                <h4 class="guesses">GUESSES LEFT: <span id="guessesLeft">0</span></h4>
+                
+                <!-- letter input -->
+                <p id="gameLetters">this is the game area</p>
+
+                <!-- wonScore -->
+                <h4 class="wins col-md-6">WINS: <span id="wonScore">0</span></h4>
+                
+                <!-- lostScore -->
+                <h4 class="losses col-md-6">LOSSES: <span id="lostScore">1</span></h4>
             </div>
             <div class="col-md-6 letterArea tmntImage">
                 <div class="letterBank">
                     <h3>LETTER BANK:</h3>
-                    <p>
+                    <p id="guessedLetters">
                         this is where the user's letters will go
                     </p>
                 </div>
                 <div class="youLose">
                     <h4>YOU LOSE!</h4>
+                    <p>press enter to play again!</p>
                 </div>
                 <div class="youWin">
                     <h4>YOU WIN!</h4>
+                    <p>press enter to play again!</p>
                 </div>
             </div>
         <!-- close row div below -->
