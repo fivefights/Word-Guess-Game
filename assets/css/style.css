@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    color: white;
+}
+.gameTitle {
+    border: none;
+    /* color: red; */
+    margin: 0 auto;
+    text-align: center;
+}
+.gameTitle img {
+    max-width: 60%;
+    vertical-align: middle;
+}
+.gameArea {
+    border: 1px solid seagreen;
+    margin: 0 auto;
+    padding: 10rem 2.5rem 10rem 2.5rem;
+
+}
+h1, h2 {
+    margin: 1rem 0 2rem 0;
+}
