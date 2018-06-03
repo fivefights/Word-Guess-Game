@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+  <!-- link google font -->
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i" rel="stylesheet">
   <!-- link Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <!-- link custom CSS stylesheet -->
@@ -15,30 +17,38 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 gameTitle">
-                <h1>Hangman</h1>
+                <!-- <h1>hangman</h1> -->
                 <img src="assets/images/logo-black.png" alt="">
-                <h2 class="font-italic">Style</h2>
+                <h1>HANGMAN</h1>
+                <h4>type a letter to start guessing!</h4>
             </div>
         <!-- close row div below -->
         </div>
-    <!-- close container div below -->
-    </div>
     
-   
-    <div class="container">
+    <!-- begin game area -->
         <div class="row">
-            <div class="col-md-5 gameArea">
-                this is a div
+            <div class="col-md-6 gameArea">
+                <h4 class="guesses">GUESSES LEFT:</h4>
+                <p>this is the game area</p>
+                <h4 class="wins col-md-6">WINS:</h4>
+                <h4 class="losses col-md-6">LOSSES:</h4>
             </div>
-            <div class="col-md-5 gameArea">
-                this is another div
+            <div class="col-md-6 letterArea tmntImage">
+                <div class="letterBank">
+                    <h3>LETTER BANK</h3>
+                    <p>
+                        this is where the user's letters will go
+                    </p>
+                </div>
             </div>
         <!-- close row div below -->
         </div>
-    
-    
     <!-- close container div below -->
     </div>
+
+    <footer>
+        &copy; 2018 Julia Christian
+    </footer>
 
 
     
