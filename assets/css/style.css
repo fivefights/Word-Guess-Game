@@ -4,10 +4,11 @@ body {
     color: white;
     font-family: 'Anonymous Pro', monospace;
 }
-h1, h2 {
+h1 {
     margin: 1rem 0 2rem 0;
     color: grey;
     font-weight: 700;
+    font-family: 'Permanent Marker', cursive;
 }
 footer {
     padding: 1rem;
@@ -34,7 +35,7 @@ footer {
 /* GAME AREA *********************************************************/
 .gameArea, .letterArea {
     border: 1px solid seagreen;
-    padding: 10rem 2.5rem 10rem 2.5rem;
+    padding: 5rem 2.5rem 5rem 2.5rem;
 }
 .gameArea h4 {
     padding-bottom: 1rem;
@@ -43,14 +44,30 @@ footer {
     border: 1px solid seagreen;
     padding: 2rem;
     font-size: 1.4rem;
+    text-align: center;
 }
 .guesses {
     text-align: center;
+    color: grey;
 }
 .wins, .losses {
     color: grey;
     border-bottom: 1px solid seagreen;
     text-align: center;
+    margin: 0 auto;
+}
+#guessesLeft, #winScore, #lossScore {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+}
+#winScore {
+    color: seagreen;
+}
+#lossScore {
+    color: crimson;
+}
+#guessesLeft {
+    color: white;
 }
 
 /* LETTER BANK ********************************************************/
@@ -74,4 +91,22 @@ footer {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.4rem;
+}
+.youLose {
+    background-color:rgba(0,0,0,0.85);
+    padding: 0.5rem;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: crimson;
+    margin-top: 15rem;
+    display: none;
+}
+.youWin {
+    background-color:rgba(0,0,0,0.85);
+    padding: 0.5rem;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    margin-top: 15rem;
+    display: none;
 }

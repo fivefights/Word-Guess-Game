@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-  <!-- link google font -->
+  
+    <!-- link google font -->
   <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  
   <!-- link Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  
   <!-- link custom CSS stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -19,7 +23,7 @@
             <div class="col-md-6 gameTitle">
                 <!-- <h1>hangman</h1> -->
                 <img src="assets/images/logo-black.png" alt="">
-                <h1>HANGMAN</h1>
+                <h1>hangman</h1>
                 <h4>type a letter to start guessing!</h4>
             </div>
         <!-- close row div below -->
@@ -28,17 +32,23 @@
     <!-- begin game area -->
         <div class="row">
             <div class="col-md-6 gameArea">
-                <h4 class="guesses">GUESSES LEFT:</h4>
+                <h4 class="guesses">GUESSES LEFT: <span id="guessesLeft">10</span></h4>
                 <p>this is the game area</p>
-                <h4 class="wins col-md-6">WINS:</h4>
-                <h4 class="losses col-md-6">LOSSES:</h4>
+                <h4 class="wins col-md-6">WINS: <span id="winScore">10</span></h4>
+                <h4 class="losses col-md-6">LOSSES: <span id="lossScore">10</span></h4>
             </div>
             <div class="col-md-6 letterArea tmntImage">
                 <div class="letterBank">
-                    <h3>LETTER BANK</h3>
+                    <h3>LETTER BANK:</h3>
                     <p>
                         this is where the user's letters will go
                     </p>
+                </div>
+                <div class="youLose">
+                    <h4>YOU LOSE!</h4>
+                </div>
+                <div class="youWin">
+                    <h4>YOU WIN!</h4>
                 </div>
             </div>
         <!-- close row div below -->
@@ -50,8 +60,6 @@
         &copy; 2018 Julia Christian
     </footer>
 
-
-    
     <!-- link bootstrap javascript files -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
