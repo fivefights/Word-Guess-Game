@@ -28,7 +28,6 @@ $(document).ready(function() {
     var wonScore = 0;
     var lostScore = 0;
 
-    // hide you win / lose divs on default
     $('.youWin').addClass('hide');
     $('.youLose').addClass('hide');
 
@@ -108,11 +107,12 @@ $(document).ready(function() {
             $('#tmntImage').css('background-image','url(https://bit.ly/2sEp0Bc)');
             // hide wrong letters div
             $('.wrongLetterBank').addClass('hide');
-            // show you win
+            // show you win and hide you lose
             $('.youWin').addClass('show');
+            $('.youWin').removeClass('hide');
+            $('.youLose').addClass('hide');
+            $('.youLose').removeClass('show');
 
-            
-            // listen for enter, then restart game
             start();
         }
 
@@ -125,8 +125,13 @@ $(document).ready(function() {
             $('#tmntImage').css('background-image','url(https://i.gifer.com/7ilT.gif)');
             // hide wrong letters div
             $('.wrongLetterBank').addClass('hide');
-            // show you lose
+            // show you lose and hide you win
             $('.youLose').addClass('show');
+            $('youLose').removeClass('hide');
+            $('.youWin').addClass('hide');
+            $('.youWin').removeClass('show');
+
+            start();
         }
     // close endRound function below    
     }
