@@ -85,7 +85,7 @@ footer {
     background-position: center;
     background-size: cover;
 }
-/* i'm assuming this has to be done to change the image using javasctript */
+/* using an actual web url was the ony way i could get javascript to find the gifs - using a path to the images folder did not work */
 
 /* default gif url = https://bit.ly/2LjZFnW */
 
@@ -94,7 +94,8 @@ footer {
 /* lost gif url = https://i.gifer.com/7ilT.gif */
 /* lost gif 2 url = https://bit.ly/2LUyDVm */
 
-/* typing gif url = http://i.imgur.com/rMM0s.gif */
+/* typing gif url = https://media.giphy.com/media/cFdHXXm5GhJsc/giphy.gif */
+
 #tmntImage {
     background-image: url(../images/tmnt.gif);
 }

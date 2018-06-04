@@ -91,7 +91,8 @@ $(document).ready(function() {
             guessesLeft--;
         }
         // show the wrong letter word bank when the user starts geussing again
-        $('.wrongLetterBank').removeClass('hide'); 
+        $('.wrongLetterBank').removeClass('hide');
+        $('#tmntImage').css('background-image','url(https://media.giphy.com/media/cFdHXXm5GhJsc/giphy.gif)');
     // close matchy function below
     }
 
