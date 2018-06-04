@@ -1,4 +1,5 @@
-/* GLOBAL *********************************************************/
+/* GLOBAL 
+*********************************************************/
 body {
     background-color: black;
     color: white;
@@ -22,7 +23,8 @@ footer {
     display: block;
 }
 
-/* GAME TITLE *********************************************************/
+/* GAME TITLE 
+*********************************************************/
 .gameTitle {
     border: none;
     margin: 0 auto;
@@ -37,7 +39,8 @@ footer {
     color: grey;
 }
 
-/* GAME AREA *********************************************************/
+/* GAME AREA 
+*********************************************************/
 .gameArea, .letterArea {
     border: 1px solid seagreen;
     padding: 1.75rem;
@@ -117,7 +120,7 @@ footer {
     text-align: center;
     font-family: 'Permanent Marker', cursive;
     color: crimson;
-    margin-top: 15rem;
+    margin-top: 12.5rem;
 }
 .youWin {
     color: limegreen;
