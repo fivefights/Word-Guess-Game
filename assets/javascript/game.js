@@ -1,57 +1,56 @@
+// making sure html is loaded before trying to execute
 $(document).ready(function() {
 
-    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    // defining global variables ====================================================================
 
-    var wordBank = [
-        "PIZZA",
-        "PEPPERONI",
-        "KOWABUNGA DUDE",
-        "DONATELLO",
-        "RAPHAEL",
-        "MICHAELANGELO",
-        "LEONARDO",
-        "MASTER SPLINTER",
-        "SHREDDER",
-        "KRANG",
-        "ROCKSTEADY",
-        "BEBOP",
-        "CHEESE"
-    ]
+    var wordBank = ["pizza", "pepperoni", "cheese", "cowabunga", "donatello", "raphael", "michaelangelo", "leonardo", "master splinter", "shredder", "krang", "rocksteady", "bebop", "april"]
 
-    // selected word
-    var word;
+    // randomly selected solution word to be guessed
+    var solution = "";
 
-    // guessed letter
-    var guess;
+    // letters of chosen word to be guessed
+    var solutionLetters = [];
 
-    // stored guesses
-    var guesses = [ ];
+    // number of blanks in solution word
+    var numSolutionBlanks = 0;
 
-    var guessesLeft;
+    // solution blanks and guessed letters
+    var numMix = [];
 
-    // count correct guesses
-    var counter;
+    // number of wrong user guesses
+    var wrongGuesses = [];
 
-    // spaces in word "-"
-    var space;
+    // letter guessed by user
+    var guessedLetter = "";
 
-    // get elements
-    var guessesLeft = 0;
-    var showGuessesLeft = $('#guessesLeft').text(guessesLeft);
+    // scoring
+    var guessesLeft = 10;
+    // var showGuessesLeft = $('#guessesLeft').text(guessesLeft);
     var wonScore = 0;
-    wonScore = $('#wonScore').text(wonScore);
+    // wonScore = $('#wonScore').text(wonScore);
     var lostScore = 0;
-    lostScore = $('#lostScore').text(lostScore);
+    // lostScore = $('#lostScore').text(lostScore);
 
-    // for (var i = 0; i < )
+    // defining functions ====================================================================
 
+    function start() {
+        // reset number of guesses left
+        guessesLeft = 10;
+        // select random solution work to be guessed
+        solution = wordBank[Math.floor(Math.random() * wordBank.length)];    
+        // split solution word into its individual letters
+        solutionLetters = solution.split("");
+        // count the number of letters in the solution
+        numSolutionBlanks = solutionLetters.length;
+        console.log(solution);
+   
+    // close start function below
+    }
 
 
 
 // targeting guessed letters in letter bank
-$('#guessedLetters').text("target");
+$('#guessesLeft').text(guessesLeft);
 
 // targeting game letters
 // $('#gameLetters').text("target");
@@ -63,11 +62,6 @@ $('.youWin').addClass('hide');
 
 // targeting gif
 $('#tmntImage').css("background-image", "url(https://bit.ly/2LjZFnW)");
-
-// listen for keystroke and print it
-$("#gameLetters").keypress(function() {
-    $("#gameLetters").text(key);
-  });
 
 // closing ready document function below
 });
