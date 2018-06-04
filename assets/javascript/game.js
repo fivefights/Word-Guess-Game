@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     // defining global variables ====================================================================
 
-    var wordBank = ["pizza", "pepperoni", "cheese", "cowabunga", "donatello", "raphael", "michaelangelo", "leonardo", "master splinter", "shredder", "krang", "rocksteady", "bebop", "april"]
+    var solutionBank = ["pizza", "pepperoni", "cheese", "cowabunga", "donatello", "raphael", "michaelangelo", "leonardo", "master splinter", "shredder", "krang", "rocksteady", "bebop", "april"]
 
     // randomly selected solution word to be guessed
     var solution = "";
@@ -12,24 +12,21 @@ $(document).ready(function() {
     var solutionLetters = [];
 
     // number of blanks in solution word
-    var numSolutionBlanks = 0;
+    var solutionBlanks = 0;
 
     // solution blanks and guessed letters
     var numMix = [];
 
     // number of wrong user guesses
-    var wrongGuesses = [];
+    var numWrongGuesses = [];
 
     // letter guessed by user
-    var guessedLetter = "";
+    var guess = "";
 
     // scoring
     var guessesLeft = 10;
-    // var showGuessesLeft = $('#guessesLeft').text(guessesLeft);
     var wonScore = 0;
-    // wonScore = $('#wonScore').text(wonScore);
     var lostScore = 0;
-    // lostScore = $('#lostScore').text(lostScore);
 
     // defining functions ====================================================================
 
@@ -37,23 +34,40 @@ $(document).ready(function() {
         // reset number of guesses left
         guessesLeft = 10;
         // select random solution work to be guessed
-        solution = wordBank[Math.floor(Math.random() * wordBank.length)];    
+        solution = solutionBank[Math.floor(Math.random() * solutionBank.length)];    
         // split solution word into its individual letters
         solutionLetters = solution.split("");
         // count the number of letters in the solution
-        numSolutionBlanks = solutionLetters.length;
+        solutionBlanks = solutionLetters.length;
         console.log(solution);
-   
+
+        // reset game area
+        numMix = [];
+        // reset guesses
+        numWrongGuesses = [];
+
+        for (var i = 0; i < solutionBlanks; i++) {
+            numMix.push("_");
+          }
+          console.log(numMix);
+          // reset guesses left to 10 and display
+          $('#guessesLeft').text(guessesLeft);
+          // adding blanks when game resets
+          $('#gameLetters').text(numMix).join(" ");
+          // deleting previous guesses when game starts
+          $('#wrongLetters').text(numWrongGuesses).join(" ");
     // close start function below
     }
 
+    // matchy matchy function for checking inputs against solution
 
 
-// targeting guessed letters in letter bank
-$('#guessesLeft').text(guessesLeft);
 
 // targeting game letters
 // $('#gameLetters').text("target");
+
+// again, this shit is not working inside the fucking for loop
+$('#guessesLeft').text(guessesLeft);
 
 // on default, show letterBank & hide the classes for youWin and youLose
 $('.letterBank').addClass('show');
