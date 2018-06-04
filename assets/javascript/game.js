@@ -17,8 +17,8 @@ $(document).ready(function() {
     // solution blanks and guessed letters
     var numMix = [];
 
-    // number of wrong user guesses
-    var numWrongGuesses = [];
+    // wrong user guess
+    var wrongGuess = [];
 
     // letter guessed by user
     var guess = "";
@@ -27,6 +27,10 @@ $(document).ready(function() {
     var guessesLeft = 10;
     var wonScore = 0;
     var lostScore = 0;
+
+    // hide you win / lose divs on default
+    $('.youWin').addClass('hide');
+    $('.youLose').addClass('hide');
 
     // defining functions ====================================================================
 
@@ -44,7 +48,7 @@ $(document).ready(function() {
         // reset game area
         numMix = [];
         // reset guesses
-        numWrongGuesses = [];
+        wrongGuess = [];
 
         for (var i = 0; i < solutionBlanks; i++) {
             numMix.push("_");
@@ -53,9 +57,9 @@ $(document).ready(function() {
           // reset guesses left to 10 and display
           $('#guessesLeft').text(guessesLeft);
           // adding blanks when game resets
-          $('#gameLetters').text(numMix).join(" ");
+          $('#gameLetters').text(numMix.join(" "));
           // deleting previous guesses when game starts
-          $('#wrongLetters').text(numWrongGuesses).join(" ");
+          $('#wrongLetters').text(wrongGuess.join(" "));
     // close start function below
     }
 
@@ -82,27 +86,62 @@ $(document).ready(function() {
         }
         else {
             // display wrong guess & subtract from guesses left
-            wrongGuesses.push(letter);
+            wrongGuess.push(letter);
             guessesLeft--;
         } 
     // close matchy function below
     }
 
+    function endRound() {
+        console.log("wins: " + wonScore + " | losses: " + lostScore + " | guesses: " + guessesLeft);
 
+        $('#guessesLeft').text(guessesLeft);
+        $('#gameLetters').text(numMix.join(" "));
+        $('#wrongLetters').text(wrongGuess.join(" "));
 
-// targeting game letters
-// $('#gameLetters').text("target");
+        // if the solution word is guessed
+        if (solutionLetters.toString() === numMix.toString()) {
+            // increase wins and display score
+            wonScore++;
+            $('#wonScore').text(wonScore);
+            // change default gif to winning pizza gif
+            $('#tmntImage').css('background-image','url(https://bit.ly/2sEp0Bc)');
+            // hide wrong letters div
+            $('.wrongLetterBank').addClass('hide');
+            // show you win
+            $('.youWin').addClass('show');
 
-// again, this shit is not working inside the fucking for loop
-$('#guessesLeft').text(guessesLeft);
+            
+            // listen for enter, then restart game
+            start();
+        }
 
-// on default, show letterBank & hide the classes for youWin and youLose
-$('.letterBank').addClass('show');
-$('.youLose').addClass('hide');
-$('.youWin').addClass('hide');
+        // if guesses left = 0
+        if (guessesLeft === 0) {
+            // add to losses and display score
+            lostScore++;
+            $('#lostScore').text(lostScore);
+            // change default gif to loser gif
+            $('#tmntImage').css('background-image','url(https://i.gifer.com/7ilT.gif)');
+            // hide wrong letters div
+            $('.wrongLetterBank').addClass('hide');
+            // show you lose
+            $('.youLose').addClass('show');
+        }
+    // close endRound function below    
+    }
 
-// targeting gif
-$('#tmntImage').css("background-image", "url(https://bit.ly/2LjZFnW)");
+    // RUN IT ALL!
+    start();
+
+    document.onkeyup = function(event) {
+        // make all keys lowercase
+        guess = String.fromCharCode(event.which).toLowerCase();
+        // Runs the code to check for correct guesses.
+        matchy(guess)
+        // Runs the code that ends each round.
+        endRound();
+      };
 
 // closing ready document function below
 });
