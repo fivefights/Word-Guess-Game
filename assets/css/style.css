@@ -25,12 +25,11 @@ footer {
 /* GAME TITLE *********************************************************/
 .gameTitle {
     border: none;
-    /* color: red; */
     margin: 0 auto;
     text-align: center;
 }
 .gameTitle img {
-    max-width: 60%;
+    max-width: 50%;
     vertical-align: middle;
 }
 .gameTitle h4 {
@@ -41,7 +40,7 @@ footer {
 /* GAME AREA *********************************************************/
 .gameArea, .letterArea {
     border: 1px solid seagreen;
-    padding: 2.5rem;
+    padding: 1.75rem;
 }
 .gameArea h4 {
     padding-bottom: 1rem;
@@ -97,13 +96,13 @@ footer {
     background-image: url(../images/tmnt.gif);
 }
 .wrongLetterBank {
-    background-color:rgba(0,0,0,0.75);
+    background-color:rgba(0,0,0,0.85);
     padding: 1rem;
-    border: 1px solid seagreen;
+    /* border: 1px solid seagreen; */
     text-align: center;
 }
 .wrongLetterBank h3 {
-    border-bottom: 1px solid seagreen;
+    border-bottom: 1px solid crimson;
     padding-bottom: 1rem;
     color: grey;
 }
