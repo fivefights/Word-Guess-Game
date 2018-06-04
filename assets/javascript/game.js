@@ -60,6 +60,33 @@ $(document).ready(function() {
     }
 
     // matchy matchy function for checking inputs against solution
+    function matchy(letter) {
+        // toggle based guessed letter existing in solution
+        var letterInSolution = false;
+        for (var i = 0; i < solutionBlanks; i++) {
+            // check soultion array for guessed letter
+            if (solution[i] === letter) {
+                letterInSolution = true;
+            }
+          }
+
+          if (letterInSolution) {
+          // loop thru solution
+          for (var j = 0; j < solutionBlanks; j++) {
+            // display a blank for each solution letter
+            if (solution[j] === letter) {
+                numMix[j] = letter;
+            }
+          }
+          console.log(numMix);
+        }
+        else {
+            // display wrong guess & subtract from guesses left
+            wrongGuesses.push(letter);
+            guessesLeft--;
+        } 
+    // close matchy function below
+    }
 
 
 
