@@ -15,6 +15,12 @@ footer {
     color: grey;
     text-align: center;
 }
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
 
 /* GAME TITLE *********************************************************/
 .gameTitle {
@@ -101,7 +107,6 @@ footer {
     font-family: 'Permanent Marker', cursive;
     color: crimson;
     margin-top: 15rem;
-    display: none;
 }
 .youWin {
     color: limegreen;
@@ -110,3 +115,4 @@ footer {
     color: white;
     font-family: 'Anonymous Pro', monospace;
 }
+
