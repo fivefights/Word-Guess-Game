@@ -1,55 +1,76 @@
+$(document).ready(function() {
+
+    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+    var wordBank = [
+        "PIZZA",
+        "PEPPERONI",
+        "KOWABUNGA DUDE",
+        "DONATELLO",
+        "RAPHAEL",
+        "MICHAELANGELO",
+        "LEONARDO",
+        "MASTER SPLINTER",
+        "SHREDDER",
+        "KRANG",
+        "ROCKSTEADY",
+        "BEBOP",
+        "CHEESE"
+    ]
+
+    // selected word
+    var word;
+
+    // guessed letter
+    var guess;
+
+    // stored guesses
+    var guesses = [ ];
+
+    var guessesLeft;
+
+    // count correct guesses
+    var counter;
+
+    // spaces in word "-"
+    var space;
+
+    // get elements
+    var guessesLeft = 0;
+    var showGuessesLeft = $('#guessesLeft').text(guessesLeft);
+    var wonScore = 0;
+    wonScore = $('#wonScore').text(wonScore);
+    var lostScore = 0;
+    lostScore = $('#lostScore').text(lostScore);
+
+    // for (var i = 0; i < )
+
+
+
+
 // targeting guessed letters in letter bank
 $('#guessedLetters').text("target");
 
 // targeting game letters
 // $('#gameLetters').text("target");
 
-// targeting background gif
-// $('.tmntImage').css("background-image") === "url(../images/lost.gif)";
-
-$(".tmntImage").filter(function() {
-    return $(this).css("background-image") === "url(../images/lost.gif)"; 
-});
-
 // on default, show letterBank & hide the classes for youWin and youLose
 $('.letterBank').addClass('show');
 $('.youLose').addClass('hide');
 $('.youWin').addClass('hide');
 
-// declare variables and set baseline for guesses and scoring
-var guessesLeft = 0;
-guessesLeft = $('#guessesLeft').text(guessesLeft);
-
-var wonScore = 0;
-wonScore = $('#wonScore').text(wonScore);
-
-var lostScore = 0;
-lostScore = $('#lostScore').text(lostScore);
-
-// create array to hold game words to be guessed
-var wordBank = [
-    "PIZZA",
-    "PEPPERONI",
-    "KOWABUNGA DUDE",
-    "DONATELLO",
-    "RAPHAEL",
-    "MICHAELANGELO",
-    "LEONARDO",
-    "MASTER SPLINTER",
-    "SHREDDER",
-    "KRANG",
-    "ROCKSTEADY",
-    "BEBOP",
-    "CHEESE"
-]
-
-// create variable for letter blanks
-var blank = "_";
+// targeting gif
+$('#tmntImage').css("background-image", "url(https://bit.ly/2LjZFnW)");
 
 // listen for keystroke and print it
 $("#gameLetters").keypress(function() {
     $("#gameLetters").text(key);
   });
+
+// closing ready document function below
+});
 
 
 

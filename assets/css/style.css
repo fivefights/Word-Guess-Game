@@ -80,9 +80,21 @@ footer {
 
 /* LETTER BANK ********************************************************/
 .tmntImage {
-    background-image: url(../images/tmnt.gif);
     background-position: center;
     background-size: cover;
+}
+/* i'm assuming this has to be done to change the image using javasctript */
+
+/* default gif url = https://bit.ly/2LjZFnW */
+
+/* won gif url = https://bit.ly/2LTvNQi */
+
+/* lost gif url = https://i.gifer.com/7ilT.gif */
+/* lost gif 2 url = https://bit.ly/2LUyDVm */
+
+/* typing gif url = http://i.imgur.com/rMM0s.gif */
+#tmntImage {
+    background-image: url(../images/tmnt.gif);
 }
 .letterBank {
     background-color:rgba(0,0,0,0.75);
