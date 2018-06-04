@@ -34,6 +34,8 @@ $(document).ready(function() {
     // defining functions ====================================================================
 
     function start() {
+        // display wrong letter bank again
+
         // reset number of guesses left
         guessesLeft = 10;
         // select random solution work to be guessed
@@ -87,7 +89,9 @@ $(document).ready(function() {
             // display wrong guess & subtract from guesses left
             wrongGuess.push(letter);
             guessesLeft--;
-        } 
+        }
+        // show the wrong letter word bank when the user starts geussing again
+        $('.wrongLetterBank').removeClass('hide'); 
     // close matchy function below
     }
 
