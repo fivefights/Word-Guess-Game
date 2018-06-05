@@ -30,6 +30,10 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
+.gameTitle p {
+    color: grey;
+    font-size: 1.4rem;
+}
 .gameTitle img {
     max-width: 50%;
     vertical-align: middle;
@@ -37,6 +41,9 @@ footer {
 .gameTitle h4 {
     padding-bottom: 1rem;
     color: grey;
+}
+.noBottomMargin {
+    margin-bottom: 0;
 }
 
 /* GAME AREA 

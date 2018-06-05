@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     // defining global variables ====================================================================
 
-    var solutionBank = ["pizza", "pepperoni", "cheese", "cowabunga", "donatello", "raphael", "michaelangelo", "leonardo", "master splinter", "shredder", "krang", "rocksteady", "bebop", "april"]
+    var solutionBank = ["pizza", "pepperoni", "cheese", "cowabunga", "donatello", "raphael", "michaelangelo", "leonardo", "master splinter", "shredder", "krang", "rocksteady", "bebop", "april o'neil", "ninja", "turtles", "teenage", "mutant", "oroku saki", "ch'rell", "hamato yoshi", "hamato miwa", "ace duck", "aeon", "agatha marble", "big mouser", "baxter stockman", "baku", "amaro", "bigfoot", "anchovies", "ice cream", "peanut butter", "blade", "slash", "rat king", "dregg", "mona lisa", "tempestra", "irma", "chrome dome", "leatherhead", "casey jones", "spaceship computer", "carter", "big louie", "pizza monster", "genghis frog", "barney stockman", "napoleon bonafrog", "seymour gutz", "captain filch", "tokka", "mondo gecko", "dirtbag", "alpha one", "rasputin the mad frog", "usagi yojimbo", "attila the frog", "punk frogs", "dirk savage", "gadgetman", "globfather", "zak", "triceratons", "drakus", "scrag", "mousers", "garson grunge", "antrax", "mung", "ray", "dask", "wingnut", "howie hardy", "electrozapper", "grillox", "raptor", "groundchuck", "scumbag", "kerma", "krulik", "tattoo", "merlin", "merrik", "mogo-san", "obento", "overdrive", "screwloose", "captain zorax", "wally airhead"]
 
     // randomly selected solution word to be guessed
     var solution = "";
