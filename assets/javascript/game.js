@@ -61,6 +61,7 @@ $(document).ready(function() {
           $('#gameLetters').text(numMix.join(" "));
           // deleting previous guesses when game starts
           $('#wrongLetters').text(wrongGuess.join(" "));
+
     // close start function below
     }
 
@@ -90,9 +91,19 @@ $(document).ready(function() {
             wrongGuess.push(letter);
             guessesLeft--;
         }
-        // show the wrong letter word bank when the user starts geussing again
+        // show the wrong letter word bank when the user starts typing again
         $('.wrongLetterBank').removeClass('hide');
         $('#tmntImage').css('background-image','url(https://media.giphy.com/media/cFdHXXm5GhJsc/giphy.gif)');
+
+        // hide .youWin and .youLose when the user starts typing again
+        if ($('.youWin').hasClass('show')) {
+            $('.youWin').removeClass('show');
+            $('.youWin').addClass('hide');
+          }
+         if ($('.youLose').hasClass('show')) {
+            $('.youLose').removeClass('show');
+            // $('.youLose').addClass('hide');
+         }
     // close matchy function below
     }
 
