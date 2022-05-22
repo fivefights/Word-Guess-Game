@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     // defining global variables ====================================================================
 
-    var solutionBank = ["pizza", "pepperoni", "cheese", "cowabunga", "donatello", "raphael", "michaelangelo", "leonardo", "master splinter", "shredder", "krang", "rocksteady", "bebop", "april o'neil", "ninja", "turtles", "teenage", "mutant", "oroku saki", "ch'rell", "hamato yoshi", "hamato miwa", "ace duck", "aeon", "agatha marble", "big mouser", "baxter stockman", "baku", "amaro", "bigfoot", "anchovies", "ice cream", "peanut butter", "blade", "slash", "rat king", "dregg", "mona lisa", "tempestra", "irma", "chrome dome", "leatherhead", "casey jones", "spaceship computer", "carter", "big louie", "pizza monster", "genghis frog", "barney stockman", "napoleon bona frog", "seymour gutz", "captain filch", "tokka", "mondo gecko", "dirtbag", "alpha one", "rasputin the mad frog", "usagi yojimbo", "attila the frog", "punk frogs", "dirk savage", "gadgetman", "globfather", "zak", "triceratons", "drakus", "scrag", "mousers", "garson grunge", "antrax", "mung", "ray", "dask", "wingnut", "howie hardy", "electrozapper", "grillox", "raptor", "groundchuck", "scumbag", "kerma", "krulik", "tattoo", "merlin", "merrik", "mogo-san", "obento", "overdrive", "screwloose", "captain zorax", "wally airhead"]
+    var solutionBank = ["pizza", "pepperoni", "cheese", "cowabunga", "donatello", "raphael", "michaelangelo", "leonardo", "master splinter", "shredder", "krang", "rocksteady", "bebop", "april", "ninja", "turtles", "teenage", "mutant", "oroku", "hamato", "ace duck", "aeon", "agatha", "bigfoot", "anchovies", "ice cream", "peanut butter", "blade", "slash", "rat king", "dregg", "mona lisa", "tempestra", "irma", "chrome dome", "leatherhead", "casey", "dirtbag", "alpha one", "usagi", "gadgetman", "globfather", "zak", "drakus", "scrag", "mousers", "antrax", "mung", "ray", "dask", "wingnut", "electrozapper", "grillox", "raptor", "groundchuck", "scumbag", "kerma", "krulik", "tattoo", "merlin", "merrik", "obento", "overdrive", "screwloose", "captain zorax", "wally airhead"]
 
     // randomly selected solution word to be guessed
     var solution = "";
@@ -120,7 +120,7 @@ $(document).ready(function() {
             wonScore++;
             $('#wonScore').text(wonScore);
             // change default gif to winning pizza gif
-            $('#tmntImage').css('background-image','url(https://bit.ly/2sEp0Bc)');
+            $('#tmntImage').css('background-image','url(https://i.pinimg.com/originals/ca/db/0f/cadb0f10ca681f50711d023315178619.gif)');
             // hide wrong letters div
             $('.wrongLetterBank').addClass('hide');
             // show you win and hide you lose
